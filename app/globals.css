@@ -133,6 +133,52 @@
 }
 
 @layer base {
+  /* Typography Foundation */
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold text-foreground;
+    line-height: 1.2;
+  }
+  
+  h1 {
+    @apply text-4xl md:text-5xl tracking-tight;
+    font-weight: 700;
+  }
+  
+  h2 {
+    @apply text-3xl md:text-4xl;
+    font-weight: 700;
+  }
+  
+  h3 {
+    @apply text-2xl md:text-3xl;
+    font-weight: 600;
+  }
+  
+  h4 {
+    @apply text-xl md:text-2xl;
+    font-weight: 600;
+  }
+  
+  h5 {
+    @apply text-lg;
+    font-weight: 600;
+  }
+  
+  h6 {
+    @apply text-base;
+    font-weight: 600;
+  }
+  
+  p {
+    @apply text-base leading-relaxed;
+    color: inherit;
+  }
+  
+  small {
+    @apply text-sm text-muted-foreground;
+  }
+  
+  /* Base styling */
   * {
     @apply border-border outline-ring/50;
   }
@@ -273,8 +319,86 @@
     @apply flex items-center justify-between;
   }
   
+  .flex-col-between {
+    @apply flex flex-col items-start justify-between;
+  }
+  
   .text-balance {
     text-wrap: balance;
+  }
+  
+  /* Modern Page Sections */
+  .page-header {
+    @apply border-b border-border/50 bg-gradient-to-r from-card via-card to-muted/5;
+  }
+  
+  .page-section {
+    @apply space-y-6;
+  }
+  
+  .section-header {
+    @apply space-y-2;
+  }
+  
+  .section-header h2 {
+    @apply text-2xl md:text-3xl;
+  }
+  
+  .section-header p {
+    @apply text-muted-foreground;
+  }
+  
+  /* Content Wrapper */
+  .content-wrapper {
+    @apply p-4 md:p-6 lg:p-8 max-w-7xl mx-auto;
+  }
+  
+  .content-container {
+    @apply space-y-8;
+  }
+  
+  /* Grid Layouts */
+  .card-grid {
+    @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6;
+  }
+  
+  .card-grid-2 {
+    @apply grid grid-cols-1 md:grid-cols-2 gap-6;
+  }
+  
+  .card-grid-4 {
+    @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6;
+  }
+  
+  /* Enhanced Card */
+  .modern-card {
+    @apply bg-card border border-border rounded-lg p-6 transition-all duration-200 hover:shadow-md hover:border-border;
+  }
+  
+  .modern-card-sm {
+    @apply bg-card border border-border rounded-lg p-4 transition-all duration-200;
+  }
+  
+  /* Modern Divider */
+  .divider {
+    @apply h-px bg-gradient-to-r from-border via-border to-transparent;
+  }
+  
+  /* Text Variants */
+  .text-muted {
+    @apply text-muted-foreground;
+  }
+  
+  .text-subtle {
+    @apply text-sm text-muted-foreground;
+  }
+  
+  .text-emphasis {
+    @apply font-semibold text-foreground;
+  }
+  
+  .text-lead {
+    @apply text-lg leading-relaxed text-foreground/80;
   }
 }
 
